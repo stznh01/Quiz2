@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    // NSString *labelText;
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +27,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)valueChanged:(id)sender {
+    NSLog(@"%f", self.slider.value);
+    [self.valueLabel setText:[NSString stringWithFormat:@"%f", self.slider.value]];
+}
 @end
